@@ -1,0 +1,502 @@
+/* .div_header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    padding: 0 20px;
+    background-color: #3e21be;
+} */
+
+
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 600px;
+    height: 600px;
+    padding-top: 25px;
+    padding-left: 35px;
+    border-bottom-right-radius: 100%;
+    background-color: rgb(231, 247, 8);
+    transform-origin: 0 0;
+    transform: scale(0);
+    transition: transform 0.3s;
+}
+
+
+
+.menu--entering {
+    transform: scale(1);
+}
+
+.menu--entered {
+    transform: scale(1);
+}
+
+.menu--exiting {
+    transform: scale(1);
+}
+
+.menu--exited {
+    transform: scale(0);
+}
+
+.menu__list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.menu--entered .menu__list {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.menu--exiting .menu__list {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+
+
+.menu__item {
+    margin: 10px;
+    font-size: 20px;
+    color: #fff;
+}
+
+.menu__old {
+    position: absolute;
+    top: 100px;
+    right: center;
+    width: 100%;
+    height: 100%;
+    padding-top: 25px;
+    padding-right: 100px;
+    background-color: darkmagenta;
+
+}
+
+
+.btn_right {
+    right: 10%;
+}
+
+/* .custom-button {
+    margin-right: auto;
+    width: 27px;
+    height: 27px;
+    background-color: vat(--accent);
+    padding: 0;
+    border: 0;
+} */
+
+/* .menu__button {
+    display: inline-block;
+    height: 48px;
+    width: auto;
+    padding-top: 50px;
+    padding-bottom: 10px;
+    row-gap: 100px;
+
+
+
+    border-radius: 5px;
+    background-color: var(--accent);
+    color: var(--black);
+    letter-spacing: 0.15px;
+    font-size: 16px;
+    font-weight: 500;
+
+    transition: opacity 0.2s ease-in;
+} */
+
+/* 
+.form-field.error {
+    border-bottom: 1px solid red;
+}
+
+.form-group input {
+    border: none;
+    border-bottom: 1px solid #C9CCD1;
+    border-radius: 0;
+}
+
+.form-group input,
+.form-group textarea {
+    font-size: 17px;
+    line-height: 130%;
+    color: #ffffff;
+    width: 100%;
+    outline: none;
+}
+
+.form-field,
+.form-field-select {
+    font-size: 14px;
+    padding: 4px;
+    display: block;
+    width: 100%;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #C9CCD1;
+    border-radius: 0;
+}
+
+input {
+    line-height: normal;
+} */
+
+/* .form {
+    width: 40%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    background-color: #f1f1f1;
+
+} */
+
+
+/* 
+    display: inline-block;
+    border: 1px solid;
+    padding: 10px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #f1f1f1;
+} */
+/* 
+#RegForm {
+    top: 0px;
+    left: 0px;
+}
+
+
+#LoginForm {
+    top: 0;
+    left: -100%;
+    opacity: 0;
+}
+
+
+.input_field {
+    display: block;
+    padding: 10px;
+    width: 100%;
+}
+
+.wrapper {
+
+    text-align: center;
+}
+
+.SubBtn {
+    padding: 15px;
+    width: 100%;
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: 10px;
+    background-color: rgb(10, 157, 248);
+    border: none;
+    color: white;
+}
+
+.wrapper label {
+    display: inline-block;
+    padding: 10px;
+    font-size: 20px;
+}
+
+#container {
+    position: relative;
+    width: 300px;
+    height: 250px;
+    display: inline-block;
+    top: 100px;
+    left: 200px;
+}
+
+#toggle_form {
+    position: relative;
+    top: -50px;
+    left: 130px;
+    padding: 5px;
+}
+
+input[type=button],
+input[type=submit],
+input[type=reset] {
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.form-control {
+    background-color: transparent !important;
+    color: white !important;
+}
+
+
+.question-button {
+    background: #F67A52;
+    color: #ffffff;
+    padding: 18px 0;
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: center;
+    text-transform: capitalize;
+    max-width: 200px;
+    transition: background 1s linear;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+    -webkit-appearance: button;
+}
+
+[type=reset],
+[type=submit],
+button,
+html [type=button] {
+    -webkit-appearance: button;
+}
+
+button {
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+    border: 0.5px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    outline: none;
+}
+
+button,
+html input[type=button],
+input[type=reset],
+input[type=submit] {
+    -webkit-appearance: button;
+    cursor: pointer;
+}
+
+button,
+select {
+    text-transform: none;
+}
+
+button {
+    overflow: visible;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    color: inherit;
+    font: inherit;
+    margin: 0;
+}
+
+button,
+html input[type=button],
+input[type=reset],
+input[type=submit] {
+    -webkit-appearance: button;
+    cursor: pointer;
+}
+
+button,
+select {
+    text-transform: none;
+}
+
+button {
+    overflow: visible;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    color: inherit;
+    font: inherit;
+    margin: 0;
+}
+
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+    color: #404040;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+button,
+select {
+    text-transform: none;
+}
+
+button,
+input {
+    overflow: visible;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+}
+
+button {
+    width: 100%;
+    background: transparent;
+    border: 1px solid #1e7af4;
+    border-radius: 0;
+    padding: 9px 30px;
+    cursor: pointer;
+    outline: none !important;
+    font-family: Ubuntu;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    font-weight: normal;
+    text-transform: none;
+    color: #F67A52;
+    outline: none;
+    border: 1px solid #F67A52;
+    box-sizing: border-box;
+    border-radius: 40px;
+}
+
+button,
+select {
+    text-transform: none;
+}
+
+button,
+input {
+    overflow: visible;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+button {
+    border-radius: 0;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+} */
+
+/* 
+.user agent stylesheet button {
+    appearance: auto;
+    font-style: ;
+    font-variant-ligatures: ;
+    font-variant-caps: ;
+    font-variant-numeric: ;
+    font-variant-east-asian: ;
+    font-variant-alternates: ;
+    font-variant-position: ;
+    font-weight: ;
+    font-stretch: ;
+    font-size: ;
+    font-family: ;
+    font-optical-sizing: ;
+    font-kerning: ;
+    font-feature-settings: ;
+    font-variation-settings: ;
+    text-rendering: auto;
+    color: buttontext;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    align-items: flex-start;
+    cursor: default;
+    box-sizing: border-box;
+    background-color: buttonface;
+    writing-mode: horizontal-tb !important;
+    margin: 0em;
+    padding-block: 1px;
+    padding-inline: 6px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonborder;
+    border-image: initial;
+} */
